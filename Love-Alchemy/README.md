@@ -41,6 +41,9 @@ Love-Alchemy/
 - Flask as the web framework for backend integration.
 - HTML template to display results dynamically.
 
+## Test Case
+![Love-Alchemy](https://github.com/user-attachments/assets/53a7cac8-e39d-459a-81bb-c2979c37677f)
+
 ## Dataset
 The dataset used for training the model is located in the `Datasets/` folder and contains attributes relevant to love compatibility.
 
