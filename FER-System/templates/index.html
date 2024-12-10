@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Facial Expression Recognition</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #333;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --white-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .description {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            border: 3px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: scale(1.02);
+        }
+
+        .video-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--white-color);
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .description {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <i class="fas fa-smile-beam"></i>
+            Live Facial Expression Recognition
+            <i class="fas fa-users"></i>
+        </h1>
+    </header>
+
+    <div class="container">
+        <div class="description">
+            <h2>Real-time Emotion Detection</h2>
+            <p>Experience cutting-edge AI technology that analyzes facial expressions in real-time, adding a delightful and interactive dimension to emotion recognition.</p>
+        </div>
+
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Live Facial Expression Detection" loading="lazy">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Emotion AI Technologies. Powered by Machine Learning. All Rights Reserved.</p>
+        <p>Developed by Siddhant Sir with <i class="fas fa-heart" style="color: #ff4136;"></i> using Python, Flask, and TensorFlow</p>
+    </footer>
+
+    <script>
+        // Optional: Add error handling for image loading
+        document.querySelector('.video-container img').onerror = function() {
+            this.alt = 'Video feed unavailable. Please check your camera connection.';
+            this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text x="50" y="50" text-anchor="middle" dy=".3em" font-size="10">No Camera</text></svg>';
+        };
+    </script>
+</body>
+</html>
