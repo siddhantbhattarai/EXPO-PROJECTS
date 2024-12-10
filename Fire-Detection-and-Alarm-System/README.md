@@ -11,7 +11,6 @@
 - [Dependencies](#dependencies)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Project Structure
 

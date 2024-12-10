@@ -13,7 +13,7 @@ Fire_Reported = 0           # Counter for the number of fire detections
 
 # List of recipient emails for bulk notifications
 recipient_emails = [
-    "king0fhellsinced1@gmail.com",
+    #"recipient1@example.com",
     # "recipient2@example.com",
     # "recipient3@example.com",
     # "recipient4@example.com"
@@ -29,8 +29,8 @@ def play_alarm_sound_function():
 
 # Function to send bulk email notifications with a professional template
 def send_mail_function():
-    sender_email = "king0fhellsinced1@gmail.com"  # Your email address
-    sender_password = 'yrhp jgmt imvy eskd'       # Your app-specific password
+    sender_email = "abc@gmail.com"  # Your email address
+    sender_password = 'abcd efgh ijkl'       # Your app-specific password
 
     # Email subject and body template
     subject = "URGENT: Fire Incident Alert at ISMT College"
