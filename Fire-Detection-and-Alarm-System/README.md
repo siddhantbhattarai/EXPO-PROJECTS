@@ -87,3 +87,6 @@ pip install opencv-python numpy playsound
 
 ## Contributing
 Contributions are welcome! Please submit a pull request or create an issue to discuss your ideas.
+
+![Fire-Alarm](https://github.com/user-attachments/assets/febc434b-43fd-490e-9ffd-705c760d5343)
+
