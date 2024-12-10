@@ -105,3 +105,4 @@ You can customize this project to suit your needs:
 - **Dark Mode:** Add a toggle for light/dark themes.
 - **Browser Extension:** Convert the project into a browser extension for wider usability.
 
+![Password-Strength-Meter](https://github.com/user-attachments/assets/8602c914-7740-4ec5-b65e-41989b4e7e4f)
