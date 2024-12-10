@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Alchemy ❤️✨</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #fefefe;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-top: 30px;
+            color: #f4d03f; /* Gold */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+        }
+
+        .form-container, .result-container {
+            background-color: #2e2e2e;
+            border: 2px solid #f4d03f;
+            border-radius: 15px;
+            padding: 20px 40px;
+            width: 80%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            flex: 1 1 calc(50% - 20px); /* Two columns */
+            text-align: left;
+        }
+
+        label {
+            font-size: 1em;
+            color: #f4d03f;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #f4d03f;
+            color: #1a1a1a;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #d4b307;
+        }
+
+        .result {
+            font-size: 2em;
+            color: #f4d03f;
+            margin: 20px 0;
+        }
+
+        .comment {
+            font-size: 1.2em;
+            color: #f0f0f0;
+        }
+
+        .button-group {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Love Alchemy ❤️✨</h1>
+    <p>Discover if your hearts are in sync 💕</p>
+
+    <!-- Form Container -->
+    <div class="form-container">
+        <form action="/predict" method="post" class="form">
+            <div class="form-group">
+                <label for="boy_name">👦 Boy's Name:</label>
+                <input type="text" id="boy_name" name="boy_name" placeholder="Enter boy's name" required>
+            </div>
+            <div class="form-group">
+                <label for="girl_name">👧 Girl's Name:</label>
+                <input type="text" id="girl_name" name="girl_name" placeholder="Enter girl's name" required>
+            </div>
+            <div class="form-group">
+                <label for="boy_age">👦 Boy's Age:</label>
+                <input type="number" id="boy_age" name="boy_age" placeholder="Enter boy's age" required>
+            </div>
+            <div class="form-group">
+                <label for="girl_age">👧 Girl's Age:</label>
+                <input type="number" id="girl_age" name="girl_age" placeholder="Enter girl's age" required>
+            </div>
+            <div class="form-group">
+                <label for="boy_fav_color">🎨 Boy's Favorite Color:</label>
+                <select id="boy_fav_color" name="boy_fav_color" required>
+                    <option value="" disabled selected>Select a color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Brown">Brown</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="girl_fav_color">🎨 Girl's Favorite Color:</label>
+                <select id="girl_fav_color" name="girl_fav_color" required>
+                    <option value="" disabled selected>Select a color</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Black">Black</option>
+                    <option value="White">White</option>
+                    <option value="Pink">Pink</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Orange">Orange</option>
+                    <option value="Brown">Brown</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="boy_hobby">👦 Boy's Hobby:</label>
+                <select id="boy_hobby" name="boy_hobby" required>
+                    <option value="" disabled selected>Select a hobby</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Traveling">Traveling</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Dancing">Dancing</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Drawing">Drawing</option>
+                    <option value="Singing">Singing</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Sports">Sports</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="girl_hobby">👧 Girl's Hobby:</label>
+                <select id="girl_hobby" name="girl_hobby" required>
+                    <option value="" disabled selected>Select a hobby</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Traveling">Traveling</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Dancing">Dancing</option>
+                    <option value="Gaming">Gaming</option>
+                    <option value="Drawing">Drawing</option>
+                    <option value="Singing">Singing</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Fishing">Fishing</option>
+                    <option value="Sports">Sports</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="boy_movie_genre">🎬 Boy's Favorite Movie Genre:</label>
+                <select id="boy_movie_genre" name="boy_movie_genre" required>
+                    <option value="" disabled selected>Select a genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Documentary">Documentary</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="girl_movie_genre">🎬 Girl's Favorite Movie Genre:</label>
+                <select id="girl_movie_genre" name="girl_movie_genre" required>
+                    <option value="" disabled selected>Select a genre</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Documentary">Documentary</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="boy_zodiac">🔮 Boy's Zodiac Sign:</label>
+                <select id="boy_zodiac" name="boy_zodiac" required>
+                    <option value="" disabled selected>Select a zodiac sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="girl_zodiac">🔮 Girl's Zodiac Sign:</label>
+                <select id="girl_zodiac" name="girl_zodiac" required>
+                    <option value="" disabled selected>Select a zodiac sign</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Taurus">Taurus</option>
+                    <option value="Gemini">Gemini</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Scorpio">Scorpio</option>
+                    <option value="Sagittarius">Sagittarius</option>
+                    <option value="Capricorn">Capricorn</option>
+                    <option value="Aquarius">Aquarius</option>
+                    <option value="Pisces">Pisces</option>
+                </select>
+            </div>
+            <button type="submit">💖 Check Compatibility 💖</button>
+        </form>
+    </div>
+
+    <!-- Result Section -->
+    {% if compatibility_percentage is not none %}
+    <div class="result-container">
+        <p><strong>{{ boy_name }}</strong> and <strong>{{ girl_name }}</strong></p>
+        <p class="result">Compatibility: {{ compatibility_percentage }}%</p>
+        <p class="comment">{{ comment }}</p>
+        <div class="button-group">
+            <button onclick="window.location.href='/';">💖 Check Another Compatibility 💖</button>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
+
