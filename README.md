@@ -1,4 +1,4 @@
-# ISMT Expo Projects
+# Expo Projects
 
 This repository contains multiple projects developed as part of the ISMT Expo. Each project focuses on solving real-world problems using technology.
 
