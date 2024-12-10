@@ -78,7 +78,7 @@ A web-based application to measure and visualize the strength of passwords.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo-url.git
+   git clone https://github.com/siddhantbhattarai/Expo-Projects.git
    ```
 2. Navigate to the project directory of your choice:
    ```bash
