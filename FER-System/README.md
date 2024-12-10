@@ -143,3 +143,4 @@ Ensure you have the following installed:
 - **Deployment:** Deploy the application to a cloud platform such as AWS, Heroku, or Azure.
 - **Mobile Application:** Extend the system to a mobile app.
 
+![facial-expression](https://github.com/user-attachments/assets/49c4fa60-aba7-4265-b6e5-204733c04002)
