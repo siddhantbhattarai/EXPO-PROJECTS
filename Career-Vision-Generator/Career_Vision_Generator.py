@@ -9,10 +9,10 @@ app = Flask(__name__)
 CORS(app)
 
 # OpenAI Configuration
-openai.api_key = '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'
+openai.api_key = 'YOUR_OPENAI_API_KEY'
 
 # Stability AI Configuration
-STABILITY_API_KEY = 'sk-nWK4qjfK9dJqWRudJ7wQQMhiz236oA1gQEUoygNoiOYhqR71'
+STABILITY_API_KEY = 'YOUR_STABILITY_API_KEY'
 STABILITY_API_HOST = "https://api.stability.ai"
 ENGINE_ID = "stable-diffusion-xl-1024-v1-0"
 
