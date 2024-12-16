@@ -1,0 +1,15 @@
+graph TD
+    A[User Uploads Image & Inputs Passion and Gender] --> B[Flask Server Receives Request]
+    B --> C[Validate Input Data]
+    C -->|Valid| D[Save Uploaded Image to 'static/uploads']
+    C -->|Invalid| E[Return Error: Invalid Input]
+    D --> F[Generate Career Prompt using OpenAI API]
+    F -->|Success| G[Generate Full Prompt for Visualization]
+    F -->|Failure| H[Return Error: Prompt Generation Failed]
+    G --> I[Generate Image using Stability AI API]
+    I -->|Success| J[Save Generated Image to 'static/generated']
+    I -->|Failure| K[Return Error: Image Generation Failed]
+    J --> L[Return JSON Response with Generated Image Path]
+    E --> M[Display Error to User]
+    H --> M
+    K --> M
