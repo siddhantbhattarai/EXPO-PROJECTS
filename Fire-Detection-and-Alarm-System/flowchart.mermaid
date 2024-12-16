@@ -1,0 +1,17 @@
+graph TD
+    A[Initialize Fire Detection System] --> B[Open Video Capture (Webcam/Video File)]
+    B --> C[Read Frame from Video]
+    C -->|Frame Read Successfully| D[Preprocess Frame (Resize, Blur, Convert to HSV)]
+    D --> E[Apply Fire Color Mask (Yellow/Orange HSV)]
+    E --> F[Count Fire-like Pixels in Frame]
+    F -->|Pixels > Threshold| G[Increment Fire Report Counter]
+    G -->|First Detection| H[Trigger Alarm Sound]
+    H --> I[Play Alarm Sound in Separate Thread]
+    G -->|Email Not Sent| J[Send Email Notifications]
+    J --> K[Send Bulk Emails in Separate Thread]
+    G --> L[Display Output with Detected Fire Regions]
+    L --> C
+    F -->|Pixels <= Threshold| M[No Fire Detected, Continue Loop]
+    M --> C
+    C -->|Frame Not Read| N[Release Resources and Exit]
+    N --> O[Stop Alarm Sound and Close Windows]
