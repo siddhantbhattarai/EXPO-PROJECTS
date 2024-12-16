@@ -1,0 +1,22 @@
+graph TD
+    A[User Inputs Password] --> B[Password Visibility Toggle]
+    A --> C[Password Strength Analysis]
+    C --> D{Check Password Length}
+    D -->|Length < 8| E[Feedback: Too Short]
+    D -->|Length >= 8| F[Check Common Passwords Dictionary]
+    F -->|Password Found| G[Feedback: Common Password]
+    F -->|Password Not Found| H[Analyze Complexity]
+    H --> I[Check Lowercase Letters]
+    H --> J[Check Uppercase Letters]
+    H --> K[Check Numbers]
+    H --> L[Check Special Characters]
+    H --> M[Calculate Charset Size]
+    M --> N[Calculate Entropy]
+    N --> O[Estimate Crack Time]
+    H --> P[Generate Feedback Based on Complexity]
+    P --> Q[Update Strength Meter]
+    Q --> R{Strength Levels}
+    R -->|Very Weak| S[Red: <30% Strength]
+    R -->|Weak| T[Orange: 30%-60% Strength]
+    R -->|Medium| U[Yellow: 60%-80% Strength]
+    R -->|Strong| V[Green: >80% Strength]
