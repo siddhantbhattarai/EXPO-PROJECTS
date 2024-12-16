@@ -1,0 +1,18 @@
+graph TD
+    A[User Accesses Web Application] --> B[Flask Server Initialized]
+    B --> C[Load Pretrained Facial Expression Model]
+    B --> D[Initialize Camera Stream]
+    C -->|Success| E[Display Web Interface]
+    D -->|Success| E
+    C -->|Failure| F[Return Error: Model Loading Failed]
+    D -->|Failure| G[Return Error: Camera Initialization Failed]
+    E --> H[Stream Video Feed to User]
+    H --> I[Detect Faces using Haar Cascade]
+    I -->|Faces Detected| J[Extract and Preprocess Face Data]
+    J --> K[Predict Emotion Using Model]
+    K --> L[Get Emoji and Funny Comment]
+    L --> M[Overlay Emoji and Comment on Video Frame]
+    I -->|No Faces Detected| N[Continue Streaming Video]
+    M --> H
+    F --> O[Display Error to User]
+    G --> O
