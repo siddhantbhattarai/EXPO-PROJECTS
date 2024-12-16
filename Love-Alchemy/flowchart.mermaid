@@ -1,0 +1,13 @@
+graph TD
+    A[User Accesses Compatibility Predictor Web App] --> B[Render Home Page]
+    B --> C[User Submits Compatibility Form]
+    C --> D[Extract Input Data from Form]
+    D --> E[Preprocess Input Data for Model]
+    E --> F[One-Hot Encode Input Data]
+    F --> G[Align Input Data with Training Columns]
+    G --> H[Convert Data to Numpy Array]
+    H --> I[Load Pretrained Random Forest Model]
+    I --> J[Predict Compatibility Probability]
+    J --> K[Calculate Compatibility Percentage]
+    K --> L[Generate Funny Comment Based on Compatibility]
+    L --> M[Render Result in Web Template]
